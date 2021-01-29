@@ -139,8 +139,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: calc(96px + env(safe-area-inset-left));
-  padding-right: calc(96px + env(safe-area-inset-right));
 }
 
 @media (min-width: 1300px) and (min-height: 300px) {
@@ -402,8 +400,40 @@
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
-  padding-left: calc(96px + env(safe-area-inset-left));
-  padding-right: calc(96px + env(safe-area-inset-right));
+}
+
+@media (min-width: 769px) {
+  .notion-page-content {
+    padding-left: calc(96px + env(safe-area-inset-left));
+    padding-right: calc(96px + env(safe-area-inset-right));
+  }
+
+  .notion-title {
+    padding-left: calc(96px + env(safe-area-inset-left));
+    padding-right: calc(96px + env(safe-area-inset-right));
+  }
+
+  .notion-page-icon-wrapper {
+    padding-left: calc(96px + env(safe-area-inset-left));
+    padding-right: calc(96px + env(safe-area-inset-right));
+  }
+}
+
+@media (max-width: 768px) {
+  .notion-page-content {
+    padding-left: calc(5px + env(safe-area-inset-left));
+    padding-right: calc(5px + env(safe-area-inset-right));
+  }
+
+  .notion-title {
+    padding-left: calc(5px + env(safe-area-inset-left));
+    padding-right: calc(5px + env(safe-area-inset-right));
+  }
+
+  .notion-page-icon-wrapper {
+    padding-left: calc(5px + env(safe-area-inset-left));
+    padding-right: calc(5px + env(safe-area-inset-right));
+  }
 }
 
 .notion-h1,
@@ -521,8 +551,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding-left: calc(96px + env(safe-area-inset-left));
-  padding-right: calc(96px + env(safe-area-inset-right));
   display: flex;
   flex-direction: row;
   justify-content: left;
