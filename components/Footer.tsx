@@ -21,16 +21,6 @@ export const Footer: React.FC<{
     <footer className={styles.footer}>
       <div className={styles.copyright}></div>
 
-      <div className={styles.settings}>
-        <a
-          className={styles.toggleDarkMode}
-          onClick={toggleDarkModeCb}
-          title='Tottle dark mode'
-        >
-          {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
-        </a>
-      </div>
-
       <div className={styles.social}>
         {config.twitter && (
           <a

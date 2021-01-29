@@ -6,7 +6,7 @@
 ;(function () {
   // Change these if you use something different in your hook.
   var storageKey = 'darkMode'
-  var classNameDark = 'dark-mode'
+  var classNameDark = 'light-mode'
   var classNameLight = 'light-mode'
 
   function setClassOnDocumentBody(darkMode) {
@@ -14,7 +14,7 @@
     document.body.classList.remove(darkMode ? classNameLight : classNameDark)
   }
 
-  var preferDarkQuery = '(prefers-color-scheme: dark)'
+  var preferDarkQuery = '(prefers-color-scheme: light)'
   var mql = window.matchMedia(preferDarkQuery)
   var supportsColorSchemeQuery = mql.media === preferDarkQuery
   var localStorageTheme = null
