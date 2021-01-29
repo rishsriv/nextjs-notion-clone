@@ -245,8 +245,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         pageAside={pageAside}
         footer={
           <Footer
-            // isDarkMode={darkMode.value}
-            // toggleDarkMode={darkMode.toggle}
+            isDarkMode={false}
           />
         }
       />

@@ -7,14 +7,13 @@ import styles from './styles.module.css'
 
 export const Footer: React.FC<{
   isDarkMode: boolean
-  toggleDarkMode: () => void
-}> = ({ isDarkMode, toggleDarkMode }) => {
+}> = ({ isDarkMode }) => {
   const toggleDarkModeCb = React.useCallback(
     (e) => {
       e.preventDefault()
-      toggleDarkMode()
+      //toggleDarkMode()
     },
-    [toggleDarkMode]
+    []
   )
 
   return (
