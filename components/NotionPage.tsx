@@ -6,6 +6,7 @@ import cs from 'classnames'
 import { useRouter } from 'next/router'
 import { useSearchParam } from 'react-use'
 import BodyClassName from 'react-body-classname'
+import useDarkMode from 'use-dark-mode'
 
 // core notion renderer
 import { NotionRenderer, Code, Collection, CollectionRow } from 'react-notion-x'
@@ -74,6 +75,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
   // lite mode is for oembed
   const isLiteMode = lite === 'true'
   const searchParams = new URLSearchParams(params)
+
+  const darkMode = useDarkMode(false, { classNameDark: 'dark-mode' })
 
   if (router.isFallback) {
     return <Loading />
@@ -226,7 +229,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         recordMap={recordMap}
         rootPageId={site.rootNotionPageId}
         fullPage={!isLiteMode}
-        darkMode={0}
+        darkMode={darkMode.value}
         previewImages={site.previewImages !== false}
         showCollectionViewDropdown={false}
         showTableOfContents={showTableOfContents}
@@ -241,7 +244,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
         pageAside={pageAside}
         footer={
           <Footer
-            isDarkMode={0}
+            isDarkMode={darkMode.value}
+            toggleDarkMode={darkMode.toggle}
           />
         }
       />
