@@ -230,7 +230,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         rootPageId={site.rootNotionPageId}
         fullPage={!isLiteMode}
         // darkMode={darkMode.value}
-        darkMode={0}
+        darkMode={false}
         previewImages={site.previewImages !== false}
         showCollectionViewDropdown={false}
         showTableOfContents={showTableOfContents}
